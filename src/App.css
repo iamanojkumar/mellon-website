@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mask-hidden {
+  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  transition: mask-position 1s ease, -webkit-mask-position 1s ease;
+  mask-position: 0 100%;
+  -webkit-mask-position: 0 100%;
+}
+
+.mask-reveal {
+  mask-position: 0 0%;
+  -webkit-mask-position: 0 0%;
+} 
