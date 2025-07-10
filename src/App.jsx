@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const videoRef = useRef(null);
-  const [muted, setMuted] = useState(true);
+  const [muted, setMuted] = useState(false); // Start unmuted
   const [loaded, setLoaded] = useState(false);
 
   const handleMuteToggle = () => {
@@ -17,12 +17,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#F5EDDA] flex flex-col items-center justify-center p-4">
-      <img src="https://i.postimg.cc/brgkK3mc/logo.png" alt="Logo" className="mb-6 w-36 md:w-48" />
+      <img src="https://i.postimg.cc/brgkK3mc/logo.png" alt="Logo" className="mb-4 w-36 md:w-48" />
+      <p style={{ fontFamily: "Inter", fontSize: "1.2rem", fontWeight: "regular", color: "#000", paddingBottom: "20px"}}>🚀 Launching soon... Stay tuned </p>
 
       <div
         className={`relative bg-white/95 shadow-lg rounded-xl overflow-hidden transition-all duration-1000 ${
           loaded ? "mask-reveal" : "mask-hidden"
-        } w-full max-w-[600px] aspect-video md:aspect-video sm:aspect-[9/16]`}
+        } w-full max-w-[600px] aspect-video md:aspect-video sm:aspect-[9/16] h-auto sm:h-[60vh]`}
       >
         <video
           ref={videoRef}
@@ -30,7 +31,8 @@ function App() {
           className="w-full h-full object-cover"
           autoPlay
           playsInline
-          muted
+          loop
+          muted={muted}
           onCanPlay={() => setLoaded(true)}
         ></video>
 
