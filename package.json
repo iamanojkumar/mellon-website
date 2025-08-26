@@ -1,0 +1,9 @@
+{
+  "name": "mellon-redirects",
+  "version": "1.0.0",
+  "description": "Redirect-only deployment for mellon.design",
+  "scripts": {
+    "build": "echo 'No build needed - redirects only'"
+  },
+  "dependencies": {}
+}
