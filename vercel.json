@@ -16,9 +16,48 @@
       "permanent": true
     },
     {
-      "source": "/:path*",
-      "destination": "https://www.mellon.design/:path*",
+      "source": "/work",
+      "destination": "https://www.mellon.design/work",
       "permanent": true
+    },
+    {
+      "source": "/service",
+      "destination": "https://www.mellon.design/service",
+      "permanent": true
+    },
+    {
+      "source": "/legal",
+      "destination": "https://www.mellon.design/legal",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "https://www.mellon.design/contact",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/404",
+      "destination": "/404.html"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/404.html",
+      "status": 404
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }
