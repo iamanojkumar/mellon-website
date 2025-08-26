@@ -1,0 +1,29 @@
+{
+  "redirects": [
+    {
+      "source": "/blog",
+      "destination": "https://blog.mellon.design",
+      "permanent": true
+    },
+    {
+      "source": "/blogs",
+      "destination": "https://blog.mellon.design",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "https://blog.mellon.design/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/:path*",
+      "destination": "https://blog.mellon.design/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://www.mellon.design/:path*",
+      "permanent": true
+    }
+  ]
+}
